@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* ========== Gruvbox Light ========== */
+.theme-gruvbox-light {
+  --theme-primary: #d65d0e;
+  --theme-secondary: #689d6a;
+  --theme-background: #fbf1c7;
+  --theme-foreground: #3c3836;
+  --theme-accent: #b16286;
+  --theme-muted: #ebdbb2;
+  --theme-border: #d5c4a1;
+}
+
+/* ========== Gruvbox Dark ========== */
+.theme-gruvbox-dark {
+  --theme-primary: #fe8019;
+  --theme-secondary: #b8bb26;
+  --theme-background: #282828;
+  --theme-foreground: #ebdbb2;
+  --theme-accent: #d3869b;
+  --theme-muted: #3c3836;
+  --theme-border: #504945;
+}
+
+/* ========== Nord Light ========== */
+.theme-nord-light {
+  --theme-primary: #5e81ac;
+  --theme-secondary: #a3be8c;
+  --theme-background: #eceff4;
+  --theme-foreground: #2e3440;
+  --theme-accent: #b48ead;
+  --theme-muted: #d8dee9;
+  --theme-border: #e5e9f0;
+}
+
+/* ========== Nord Dark ========== */
+.theme-nord-dark {
+  --theme-primary: #81a1c1;
+  --theme-secondary: #a3be8c;
+  --theme-background: #2e3440;
+  --theme-foreground: #eceff4;
+  --theme-accent: #b48ead;
+  --theme-muted: #434c5e;
+  --theme-border: #4c566a;
+}
+
+/* ========== Catppuccin Latte (light) ========== */
+.theme-catppuccin-light {
+  --theme-primary: #d20f39;
+  --theme-secondary: #40a02b;
+  --theme-background: #eff1f5;
+  --theme-foreground: #4c4f69;
+  --theme-accent: #8839ef;
+  --theme-muted: #ccd0da;
+  --theme-border: #bcc0cc;
+}
+
+/* ========== Catppuccin Mocha (dark) ========== */
+.theme-catppuccin-dark {
+  --theme-primary: #f38ba8;
+  --theme-secondary: #a6e3a1;
+  --theme-background: #1e1e2e;
+  --theme-foreground: #cdd6f4;
+  --theme-accent: #cba6f7;
+  --theme-muted: #313244;
+  --theme-border: #45475a;
+}
+
+/* ========== Monokai Light ========== */
+.theme-monokai-light {
+  --theme-primary: #f92672;
+  --theme-secondary: #a6e22e;
+  --theme-background: #f8f8f2;
+  --theme-foreground: #272822;
+  --theme-accent: #66d9ef;
+  --theme-muted: #eaeaea;
+  --theme-border: #cccccc;
+}
+
+/* ========== Monokai Dark ========== */
+.theme-monokai-dark {
+  --theme-primary: #f92672;
+  --theme-secondary: #a6e22e;
+  --theme-background: #272822;
+  --theme-foreground: #f8f8f2;
+  --theme-accent: #66d9ef;
+  --theme-muted: #3e3d32;
+  --theme-border: #75715e;
+}
+
+/* ========== Pine Dark (Rosé Pine Moon) ========== */
+.theme-pine-dark {
+  --theme-primary: #9ccfd8;
+  --theme-secondary: #31748f;
+  --theme-background: #232136;
+  --theme-foreground: #e0def4;
+  --theme-accent: #c4a7e7;
+  --theme-muted: #393552;
+  --theme-border: #44415a;
+}
+
+/* ========== Rose Pine Light (Rosé Pine Dawn) ========== */
+.theme-rosepine-light {
+  --theme-primary: #b4637a;
+  --theme-secondary: #286983;
+  --theme-background: #faf4ed;
+  --theme-foreground: #575279;
+  --theme-accent: #d7827e;
+  --theme-muted: #dfdad9;
+  --theme-border: #cecacd;
+}
+
+@theme inline {
+  --color-background: var(--theme-background);
+  --color-foreground: var(--theme-foreground);
+
+  --color-card: var(--theme-background);
+  --color-card-foreground: var(--theme-foreground);
+
+  --color-popover: var(--theme-background);
+  --color-popover-foreground: var(--theme-foreground);
+
+  --color-primary: var(--theme-primary);
+  --color-primary-foreground: var(--theme-background);
+
+  --color-secondary: var(--theme-secondary);
+  --color-secondary-foreground: var(--theme-background);
+
+  --color-muted: var(--theme-muted);
+  --color-muted-foreground: color-mix(
+    in srgb,
+    var(--theme-foreground) 70%,
+    transparent
+  );
+
+  --color-accent: var(--theme-accent);
+  --color-accent-foreground: var(--theme-background);
+
+  --color-destructive: #ff4d4f;
+  --color-destructive-foreground: white;
+
+  --color-border: var(--theme-border);
+  --color-input: var(--theme-border);
+  --color-ring: var(--theme-primary);
+
+  --radius: 0.5rem;
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  @apply transition-colors duration-1000;
+  background: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  transition: background-color 0.8s ease, color 0.8s ease,
+    border-color 0.8s ease;
+}
