@@ -2,6 +2,7 @@
 
 import Button from "@/components/Button";
 import { useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const themes = [
   "theme-gruvbox-light",
@@ -17,6 +18,8 @@ const themes = [
 ];
 
 export default function Home() {
+  const router = useRouter();
+
   useEffect(() => {
     const root = document.documentElement;
     let index = 0;
@@ -46,7 +49,7 @@ export default function Home() {
         </p>
         <Button
           className={"transition-colors duration-1000"}
-          onClick={() => {}}
+          onClick={() => router.push("/pallete")}
         >
           Try
         </Button>
