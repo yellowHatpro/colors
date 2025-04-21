@@ -49,7 +49,7 @@ export default function Home() {
         </p>
         <Button
           className={"transition-colors duration-1000"}
-          onClick={() => router.push("/pallete")}
+          onClick={() => router.push("/palette")}
         >
           Try
         </Button>

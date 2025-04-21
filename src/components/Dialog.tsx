@@ -1,3 +1,5 @@
+import { X } from "lucide-react";
+
 interface DialogProps {
   isOpen: boolean;
   onClose: () => void;
@@ -20,9 +22,9 @@ export default function Dialog({
           <h2 className="text-xl font-semibold">{title}</h2>
           <button
             onClick={onClose}
-            className="text-muted-foreground hover:text-foreground"
+            className="cursor-pointer hover:bg-error p-1 rounded-md"
           >
-            ✕
+            <X size={16} />
           </button>
         </div>
         {children}

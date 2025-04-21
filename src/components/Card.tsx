@@ -1,12 +1,14 @@
 import { Download } from "lucide-react";
 import { useState } from "react";
 import Dialog from "./Dialog";
+import { Theme } from "@/utils/themes";
 
 interface CardProps {
   children: React.ReactNode;
   onClick?: () => void;
   className?: string;
   onExport?: () => void;
+  theme?: Theme;
 }
 
 export default function Card({
@@ -14,6 +16,7 @@ export default function Card({
   onClick,
   className = "",
   onExport,
+  theme,
 }: CardProps) {
   const [isDialogOpen, setIsDialogOpen] = useState(false);
 
@@ -21,6 +24,21 @@ export default function Card({
     e.stopPropagation();
     setIsDialogOpen(true);
     onExport?.();
+  };
+
+  const handleDownload = () => {
+    if (!theme) return;
+    const blob = new Blob([JSON.stringify(theme, null, 2)], {
+      type: "application/json",
+    });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = `${theme.name.toLowerCase().replace(/\s+/g, "-")}.json`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
   };
 
   return (
@@ -48,10 +66,18 @@ export default function Card({
       <Dialog
         isOpen={isDialogOpen}
         onClose={() => setIsDialogOpen(false)}
-        title="Export Colors"
+        title="Export Theme"
       >
-        <div className="text-muted-foreground">
-          Export options will be added here...
+        <div className="space-y-4">
+          <pre className="bg-muted p-4 rounded-lg overflow-auto max-h-[200px] text-sm">
+            {theme && JSON.stringify(theme, null, 2)}
+          </pre>
+          <button
+            onClick={handleDownload}
+            className="w-full bg-primary text-primary-foreground py-2 px-4 rounded-lg hover:opacity-90 transition-opacity"
+          >
+            Download JSON
+          </button>
         </div>
       </Dialog>
     </>

@@ -9,6 +9,7 @@ export interface Theme {
     accent: string;
     muted: string;
     border: string;
+    error: string;
   };
 }
 
@@ -24,6 +25,7 @@ export const themes: Theme[] = [
       accent: "#b16286",
       muted: "#ebdbb2",
       border: "#d5c4a1",
+      error: "#cc241d",
     },
   },
   {
@@ -37,6 +39,7 @@ export const themes: Theme[] = [
       accent: "#d3869b",
       muted: "#3c3836",
       border: "#504945",
+      error: "#fb4934",
     },
   },
   {
@@ -50,6 +53,7 @@ export const themes: Theme[] = [
       accent: "#b48ead",
       muted: "#d8dee9",
       border: "#e5e9f0",
+      error: "#bf616a",
     },
   },
   {
@@ -63,6 +67,7 @@ export const themes: Theme[] = [
       accent: "#b48ead",
       muted: "#434c5e",
       border: "#4c566a",
+      error: "#bf616a",
     },
   },
   {
@@ -76,6 +81,7 @@ export const themes: Theme[] = [
       accent: "#8839ef",
       muted: "#ccd0da",
       border: "#bcc0cc",
+      error: "#d20f39",
     },
   },
   {
@@ -89,6 +95,7 @@ export const themes: Theme[] = [
       accent: "#cba6f7",
       muted: "#313244",
       border: "#45475a",
+      error: "#f38ba8",
     },
   },
   {
@@ -102,6 +109,7 @@ export const themes: Theme[] = [
       accent: "#66d9ef",
       muted: "#eaeaea",
       border: "#cccccc",
+      error: "#f92672",
     },
   },
   {
@@ -115,6 +123,7 @@ export const themes: Theme[] = [
       accent: "#66d9ef",
       muted: "#3e3d32",
       border: "#75715e",
+      error: "#f92672",
     },
   },
   {
@@ -128,6 +137,7 @@ export const themes: Theme[] = [
       accent: "#c4a7e7",
       muted: "#393552",
       border: "#44415a",
+      error: "#eb6f92",
     },
   },
   {
@@ -141,6 +151,7 @@ export const themes: Theme[] = [
       accent: "#d7827e",
       muted: "#dfdad9",
       border: "#cecacd",
+      error: "#b4637a",
     },
   },
 ];

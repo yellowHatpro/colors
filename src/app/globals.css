@@ -9,6 +9,7 @@
   --theme-accent: #b16286;
   --theme-muted: #ebdbb2;
   --theme-border: #d5c4a1;
+  --theme-error: #cc241d;
 }
 
 /* ========== Gruvbox Dark ========== */
@@ -20,6 +21,7 @@
   --theme-accent: #d3869b;
   --theme-muted: #3c3836;
   --theme-border: #504945;
+  --theme-error: #fb4934;
 }
 
 /* ========== Nord Light ========== */
@@ -31,6 +33,7 @@
   --theme-accent: #b48ead;
   --theme-muted: #d8dee9;
   --theme-border: #e5e9f0;
+  --theme-error: #bf616a;
 }
 
 /* ========== Nord Dark ========== */
@@ -42,6 +45,7 @@
   --theme-accent: #b48ead;
   --theme-muted: #434c5e;
   --theme-border: #4c566a;
+  --theme-error: #bf616a;
 }
 
 /* ========== Catppuccin Latte (light) ========== */
@@ -53,6 +57,7 @@
   --theme-accent: #8839ef;
   --theme-muted: #ccd0da;
   --theme-border: #bcc0cc;
+  --theme-error: #d20f39;
 }
 
 /* ========== Catppuccin Mocha (dark) ========== */
@@ -64,6 +69,7 @@
   --theme-accent: #cba6f7;
   --theme-muted: #313244;
   --theme-border: #45475a;
+  --theme-error: #f38ba8;
 }
 
 /* ========== Monokai Light ========== */
@@ -75,6 +81,7 @@
   --theme-accent: #66d9ef;
   --theme-muted: #eaeaea;
   --theme-border: #cccccc;
+  --theme-error: #f92672;
 }
 
 /* ========== Monokai Dark ========== */
@@ -86,6 +93,7 @@
   --theme-accent: #66d9ef;
   --theme-muted: #3e3d32;
   --theme-border: #75715e;
+  --theme-error: #f92672;
 }
 
 /* ========== Pine Dark (Rosé Pine Moon) ========== */
@@ -97,6 +105,7 @@
   --theme-accent: #c4a7e7;
   --theme-muted: #393552;
   --theme-border: #44415a;
+  --theme-error: #eb6f92;
 }
 
 /* ========== Rose Pine Light (Rosé Pine Dawn) ========== */
@@ -108,6 +117,7 @@
   --theme-accent: #d7827e;
   --theme-muted: #dfdad9;
   --theme-border: #cecacd;
+  --theme-error: #b4637a;
 }
 
 @theme inline {
@@ -136,12 +146,13 @@
   --color-accent: var(--theme-accent);
   --color-accent-foreground: var(--theme-background);
 
-  --color-destructive: #ff4d4f;
-  --color-destructive-foreground: white;
+  --color-destructive: var(--theme-error);
+  --color-destructive-foreground: var(--theme-background);
 
   --color-border: var(--theme-border);
   --color-input: var(--theme-border);
   --color-ring: var(--theme-primary);
+  --color-error: var(--theme-error);
 
   --radius: 0.5rem;
   --font-sans: var(--font-geist-sans);

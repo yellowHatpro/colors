@@ -28,6 +28,7 @@ export default function PalletePage() {
             key={theme.className}
             onClick={() => setActiveTheme(theme.className)}
             onExport={() => handleExport(theme)}
+            theme={theme}
           >
             <h2 className="text-xl font-semibold mb-4 text-secondary">
               {theme.name}
